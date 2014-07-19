@@ -3,6 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api, where) {
+	
   api.use([
     "templating",
     "coffeescript",
@@ -13,9 +14,12 @@ Package.on_use(function (api, where) {
     "less",
     "reaction-core"
   ], ["client", "server"]);
+
   api.add_files([
     "client/register.coffee",
     "client/routing.coffee",
     "client/templates/searchBox.html",
     "client/templates/searchBox.coffee"
   ], ["client"]);
+
+});
