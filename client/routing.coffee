@@ -1,14 +1,8 @@
 Router.map ->
-  @route 'search',
+  @route 'searchBox',
     controller: ShopAdminController
-    path: 'dashboard/settings/search',
-    template: 'search'
-    waitOn: ->
-      PackagesHandle
-  @route 'searchtest',
-    controller: ShopAdminController
-    path: 'searchtest',
-    template: 'stripetest'
+    path: 'searchbox',
+    template: 'searchBox'
     waitOn: ->
       PackagesHandle
       
