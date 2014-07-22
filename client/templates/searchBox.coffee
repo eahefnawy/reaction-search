@@ -1,7 +1,7 @@
 Template.searchBox.rendered = () ->
 
 	availableTags = [
-    "ActionScript"
+    "<h1>ActionScript</h1>"
     "AppleScript"
     "Asp"
     "BASIC"
