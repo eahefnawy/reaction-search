@@ -6,8 +6,8 @@ Template.searchBox.rendered = () ->
       console.log Products.find()
       arr = [
         {
-          label: label
-          value: value
+          label: "label"
+          value: "value"
         }
       ]
       response arr
