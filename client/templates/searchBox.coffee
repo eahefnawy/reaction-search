@@ -3,7 +3,6 @@ Template.searchBox.rendered = () ->
 	$("#tags").autocomplete(
     minLength: 0
 		source: (request, response) ->
-      console.log request
       arr = [
         {
           label: "this label"
@@ -13,7 +12,9 @@ Template.searchBox.rendered = () ->
       ]
       response arr
   ).data("ui-autocomplete")._renderItem = (ul, item) ->
-    return  $( "<li>" ).append( $( "<a>" ).text( item.txt ).attr("href","http://www.google.com").append($("img").attr("src", "https://www.google.com/images/srpr/logo11w.png")) ).appendTo( ul )
+    return  $( "<li>" ).append( $( "<a>" ).text( item.txt ).attr("href","http://www.google.com").append("test") ).appendTo( ul )
+
+    #$("img").attr("src", "https://www.google.com/images/srpr/logo11w.png")
 
 
 
