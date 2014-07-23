@@ -1,6 +1,6 @@
 Template.searchBox.rendered = () ->
 
-	$("#tags").autocomplete(
+	$("#tags").autocomplete
     minLength: 0
 		source: (request, response) ->
       arr = [
@@ -11,6 +11,7 @@ Template.searchBox.rendered = () ->
         }
       ]
       response arr
-    
+    _renderItem: (ul, item) ->
+      return $("<li>").append("<p>Test</p>").appendTo(ul)
 
 
