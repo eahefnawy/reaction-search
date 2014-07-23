@@ -1,29 +1,10 @@
 Template.searchBox.rendered = () ->
+###
+	$("#tags").autocomplete
+        minLength: 0
+		source: (request, response) ->
+            response Products.find()
+    .autocomplete("instance")._renderItem = (ul, item) ->
+        $("<li>").append("<a>" + item.label + "<br>" + item.desc + "</a>").appendTo ul
 
-	availableTags = [
-    "<h1>ActionScript</h1>"
-    "AppleScript"
-    "Asp"
-    "BASIC"
-    "C"
-    "C++"
-    "Clojure"
-    "COBOL"
-    "ColdFusion"
-    "Erlang"
-    "Fortran"
-    "Groovy"
-    "Haskell"
-    "Java"
-    "JavaScript"
-    "Lisp"
-    "Perl"
-    "PHP"
-    "Python"
-    "Ruby"
-    "Scala"
-    "Scheme"
-  ]
-
-	$("#tags").autocomplete 
-		source: availableTags
+###
