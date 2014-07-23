@@ -11,7 +11,5 @@ Template.searchBox.rendered = () ->
         }
       ]
       response arr
-    _renderItem: (ul, item) ->
-      return $("<li>").append("<p>Test</p>").appendTo(ul)
 
 
