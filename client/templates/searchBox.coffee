@@ -10,6 +10,6 @@ Template.searchBox.rendered = () ->
           txt: "hellooooo"
         }
       ]
-      response arr
+      response  arr
 
 
