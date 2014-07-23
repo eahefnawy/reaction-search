@@ -6,11 +6,12 @@ Template.searchBox.rendered = () ->
       console.log Products.find()
       arr = [
         {
-          label: "label"
-          value: "value"
+          label: "this label"
+          value: "this value"
+          txt: "hellooooo"
         }
       ]
       response arr
   )._renderItem = (ul, item) ->
-    $("<li>").append("<a>" + item.title + "<br>" + item.handle + "</a>").appendTo ul
+    $("<li>").append("<a>" + item.label + "<br>" + item.txt + "</a>").appendTo ul
 
