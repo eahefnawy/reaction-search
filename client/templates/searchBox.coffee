@@ -13,5 +13,5 @@ Template.searchBox.rendered = () ->
       ]
       response arr
   ).data("ui-autocomplete")._renderItem = (ul, item) ->
-    return  $( "<li>" ).append( $( "<a>" ).text( item.txt ) ).appendTo( ul )
+    return  $( "<li>" ).append( $( "<a>" ).text( item.txt ) ).attr("href","http://www.google.com").appendTo( ul )
 
