@@ -16,10 +16,3 @@ Template.searchBox.rendered = () ->
       return  $("<li>").append( $( "<a>" ).text( item.label ) ).append("<p>testing</p>").appendTo( ul )
 
   )
-
-_renderItem: function( ul, item ) {
-  return $( "<li>" )
-    .attr( "data-value", item.value )
-    .append( $( "<a>" ).text( item.label ) ).append("<p>testing</p>")
-    .appendTo( ul );
-}
