@@ -12,9 +12,10 @@ Template.searchBox.rendered = () ->
       ]
       response arr
   ).data("ui-autocomplete")._renderItem = (ul, item) ->
-    return  $( "<li>" ).append( $( "<a>" ).text( item.txt ).attr("href","http://www.google.com").append($("<img>").attr("src", "https://www.google.com/images/srpr/logo11w.png")) ).appendTo( ul )
+    return  $( "<li>" ).html("<a href='https://www.google.com'>something</a>")
 
     #$("img").attr("src", "https://www.google.com/images/srpr/logo11w.png")
+    #return  $( "<li>" ).append( $( "<a>" ).attr("href","http://www.google.com").append($("<img>").attr("src", "https://www.google.com/images/srpr/logo11w.png")) ).appendTo( ul )
 
 
 
