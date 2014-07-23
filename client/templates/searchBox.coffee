@@ -1,8 +1,9 @@
 Template.searchBox.rendered = () ->
 
-	$("#tags").autocomplete
+	$("#tags").autocomplete(
     minLength: 0
 		source: (request, response) ->
+      console.log request
       arr = [
         {
           label: "this label"
@@ -10,6 +11,6 @@ Template.searchBox.rendered = () ->
           txt: "hellooooo"
         }
       ]
-      response  arr
-
+      response arr
+  )
 
