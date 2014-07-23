@@ -11,6 +11,6 @@ Template.searchBox.rendered = () ->
         }
       ]
       response arr
-  ).autocomplete("instance")._renderItem = (ul, item) ->
+  )._renderItem = (ul, item) ->
     $("<li>").append("<a>" + item.title + "<br>" + item.handle + "</a>").appendTo ul
 
