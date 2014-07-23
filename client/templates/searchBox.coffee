@@ -30,9 +30,9 @@ Template.searchBox.rendered = () ->
     }
     ]
     $("#tags").autocomplete(
-    minLength: 0
-    source: projects
+        minLength: 0
+        source: projects
     ).autocomplete("instance")._renderItem = (ul, item) ->
-    $("<li>").append("<a>" + item.label + "<br>" + item.desc + "</a>").appendTo ul
+        $("<li>").append("<a>" + item.label + "<br>" + item.desc + "</a>").appendTo ul
 
     return
