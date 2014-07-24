@@ -5,12 +5,12 @@ Meteor.methods
 		autocompleteList = []
 		console.log autocompleteList
 
-		searchResults.forEach (product) ->
+		searchResults.forEach (product, autocompleteList) ->
 			listItem =
 			value: product.title
 			id: product._id
 			price: product.variants[0].price
-			autocompleteList.push(listItem)
+			this.push(listItem)
 
 		return autocompleteList
 
