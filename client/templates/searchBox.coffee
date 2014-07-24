@@ -3,30 +3,10 @@ Template.searchBox.rendered = () ->
 	$("#searchBox").autocomplete(
     minLength: 0
 		source: (request, response) ->
-      # return array of results
-      # create array for autocomplete
-
-      searchResults = Products.find()
-      autocompleteList = []
-      console.log autocompleteList
-      console.log searchResults.count()
-
-      searchResults.forEach (product) ->
-        console.log "hello"
-        console.log product.title
-        console.log product._id
-        console.log product.variants[0].price
-        listItem =
-          value: product.title
-          id: product._id
-          price: product.variants[0].price
-        console.log listItem
-
-      
-        #autocompleteList.push(listItem)
-        return
-
-      response autocompleteList
+      Meteor.call "searchProducts", request, (error, result) ->
+        console.log error if error
+        if result
+          response autocompleteList
   ).data("ui-autocomplete")._renderItem = (ul, item) ->
 
     htmlBlock = """

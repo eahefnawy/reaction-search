@@ -24,7 +24,7 @@ Package.on_use(function (api, where) {
   ], ["client"]);
 
   api.add_files([
-    "server/test.coffee"
+    "server/methods.coffee"
   ], ["server"]);
 
 });
