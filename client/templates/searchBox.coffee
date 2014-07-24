@@ -14,9 +14,9 @@ Template.searchBox.rendered = () ->
   ).data("ui-autocomplete")._renderItem = (ul, item) ->
     return  $( "<li>" ).html("
     <a href='http://www.google.com'>
-      <img class ='serach-item-img' src='https://www.google.com/images/srpr/logo11w.png' alt='Smiley face'>
-      <h4 class ='serach-item-title' >Gold Ring</h4>
-      <h4 class ='serach-item-price' >Silver Ring</h4>
+      <img class ='search-item-img' src='https://www.google.com/images/srpr/logo11w.png' alt='Smiley face'>
+      <h4 class ='search-item-title' >Gold Ring</h4>
+      <h4 class ='search-item-price' >Silver Ring</h4>
     </a>
       ").appendTo( ul )
 
