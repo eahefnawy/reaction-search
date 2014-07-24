@@ -23,4 +23,8 @@ Package.on_use(function (api, where) {
     "client/templates/searchBox.coffee"
   ], ["client"]);
 
+  api.add_files([
+    "server/test.coffee"
+  ], ["server"]);
+
 });
