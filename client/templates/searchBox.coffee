@@ -14,7 +14,7 @@ Template.searchBox.rendered = () ->
   ).data("ui-autocomplete")._renderItem = (ul, item) ->
     return  $( "<li>" ).html("
     <a class='search-item-anchor' href='http://www.google.com'>
-      Gold Ring
+      Gold Ring<span class='search-item-price'>$35.95</span>
     </a>
       ").appendTo( ul )
 
