@@ -15,4 +15,3 @@ Meteor.methods
 
 		console.log autocompleteList
 		return autocompleteList
-return
