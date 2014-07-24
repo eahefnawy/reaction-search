@@ -1,27 +1,28 @@
 Template.searchBox.rendered = () ->
 
 	$("#searchBox").autocomplete(
-    minLength: 1
+    minLength: 0
 		source: (request, response) ->
       # return array of results
       # create array for autocomplete
-      arr = [
-        {
-          value: "Lady Gaga"
-          url: "http://www.ladygaga.com"
-          price: "12.35"
-        }
-        {
-          value: "Lana Del Rey"
-          url: "http://www.lanadelrey.com"
-          price: "45.90"
-        }
-      ]
-      response arr
+
+      searchResults = Products.find()
+      autocompleteList = []
+
+      for item in searchResults
+
+        listItem =
+          value: item.title
+          id: item._id #TODO: use product handle instead of product id
+          price: item.variants[0].price
+
+        autocompleteList.push(listItem)
+
+      response autocompleteList
   ).data("ui-autocomplete")._renderItem = (ul, item) ->
 
     htmlBlock = """
-                  <a href="#{item.url}"> #{item.value}
+                  <a href="/product/#{item.id}"> #{item.value}
                     <span class="search-item-price">
                       $#{item.price}
                     </span>
@@ -30,7 +31,6 @@ Template.searchBox.rendered = () ->
     return  $( "<li>" ).html(htmlBlock).appendTo( ul )
 
   ###
-  coffescript string intre
   coffescript array methods to fill up autocomplete array
   mongodb indexes
 
