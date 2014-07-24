@@ -19,7 +19,6 @@ Template.searchBox.rendered = () ->
     return  $( "<li>" ).html(htmlBlock).appendTo( ul )
 
   ###
-  coffescript array methods to fill up autocomplete array
   mongodb indexes
-
+  read meteor collections & meteor methods
   ###
