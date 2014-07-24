@@ -4,8 +4,8 @@
 }
 
 .search-item-img {
-	width: 70px;
-	height: 70px;
+	width: 30px;
+	height: 30px;
 	float: left;
 }
 
@@ -15,4 +15,12 @@
 
 .search-item-price {
 	float: right;
+}
+
+.search-item-img:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
 }
