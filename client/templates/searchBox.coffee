@@ -3,6 +3,8 @@ Template.searchBox.rendered = () ->
 	$("#searchBox").autocomplete(
     minLength: 1
 		source: (request, response) ->
+      # return array of results
+      # create array for autocomplete
       arr = [
         {
           value: "Lady Gaga"
@@ -17,18 +19,19 @@ Template.searchBox.rendered = () ->
       ]
       response arr
   ).data("ui-autocomplete")._renderItem = (ul, item) ->
-    return  $( "<li>" ).html("
-    <a class='search-item-anchor' href='" + item.url + "'>
-      " + item.value + "
-      <span class='search-item-price'>
-        $" + item.price + "
-      </span>
-    </a>
-      ").appendTo( ul )
 
-    #$("img").attr("src", "https://www.google.com/images/srpr/logo11w.png")
-    #return  $( "<li>" ).append( $( "<a>" ).attr("href","http://www.google.com").append($("<img>").attr("src", "https://www.google.com/images/srpr/logo11w.png")) ).appendTo( ul )
+    htmlBlock = """
+                  <a href="#{item.url}"> #{item.value}
+                    <span class="search-item-price">
+                      $#{item.price}
+                    </span>
+                  </a>
+                """
+    return  $( "<li>" ).html(htmlBlock).appendTo( ul )
 
-    ###
+  ###
+  coffescript string intre
+  coffescript array methods to fill up autocomplete array
+  mongodb indexes
 
-    ###
+  ###
