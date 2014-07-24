@@ -7,6 +7,7 @@ Template.searchBox.rendered = () ->
       # create array for autocomplete
 
       searchResults = Products.find()
+      console.log searchResults
       autocompleteList = []
 
       for item in searchResults
