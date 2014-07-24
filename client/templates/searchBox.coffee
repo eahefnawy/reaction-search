@@ -7,16 +7,18 @@ Template.searchBox.rendered = () ->
       # create array for autocomplete
 
       searchResults = Products.find()
-      console.log searchResults[0].title
       autocompleteList = []
 
-      for item in searchResults
-
+      searchResults.forEach (product) ->
+        console.log product.title
+        console.log product._id
+        console.log product.variants[0].price
         listItem =
-          value: item.title
-          id: item._id #TODO: use product handle instead of product id
-          price: item.variants[0].price
+          value: product.title
+          id: product._id
+          price: product.variants[0].price
 
+      
         autocompleteList.push(listItem)
 
       response autocompleteList
