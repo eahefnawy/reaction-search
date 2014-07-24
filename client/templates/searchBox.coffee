@@ -1,6 +1,6 @@
 Template.searchBox.rendered = () ->
 
-	$("#tags").autocomplete(
+	$("#searchBox").autocomplete(
     minLength: 0
 		source: (request, response) ->
       arr = [
