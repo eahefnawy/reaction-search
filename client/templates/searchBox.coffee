@@ -8,6 +8,7 @@ Template.searchBox.rendered = () ->
 
       searchResults = Products.find()
       autocompleteList = []
+      console.log autocompleteList
 
       searchResults.forEach (product) ->
         console.log product.title
