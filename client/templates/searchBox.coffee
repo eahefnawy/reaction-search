@@ -20,6 +20,7 @@ Template.searchBox.rendered = () ->
 
       
         autocompleteList.push(listItem)
+        return
 
       response autocompleteList
   ).data("ui-autocomplete")._renderItem = (ul, item) ->
