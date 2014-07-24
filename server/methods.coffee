@@ -10,7 +10,8 @@ Meteor.methods
 			value: product.title
 			id: product._id
 			price: product.variants[0].price
-			this.push(listItem)
+			console.log this
+			#this.push(listItem)
 
 		return autocompleteList
 
