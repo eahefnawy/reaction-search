@@ -9,6 +9,7 @@ Template.searchBox.rendered = () ->
       searchResults = Products.find()
       autocompleteList = []
       console.log autocompleteList
+      searchResults.count()
 
       searchResults.forEach (product) ->
         console.log "hello"
