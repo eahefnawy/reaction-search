@@ -1,6 +1,6 @@
 Meteor.methods
 	searchProducts: (request) ->
-
+		console.log request.item
 		searchResults = Products.find({title: request.item})
 		autocompleteList = []
 		console.log autocompleteList
@@ -13,5 +13,4 @@ Meteor.methods
 			this.push(listItem)
 		), autocompleteList
 
-		console.log autocompleteList
 		return autocompleteList
