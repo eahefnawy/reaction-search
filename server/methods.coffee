@@ -1,9 +1,9 @@
 Meteor.methods
 	searchProducts: (request) ->
-		console.log request.item
-		searchResults = Products.find({title: request.item})
+		console.log request.term
+		searchResults = Products.find({title: request.term})
+		console.log searchResults.count()
 		autocompleteList = []
-		console.log autocompleteList
 
 		searchResults.forEach ((product) ->
 			listItem =
