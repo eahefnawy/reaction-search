@@ -3,6 +3,7 @@ Meteor.methods
 
 		searchResults = Products.find()
 		autocompleteList = []
+		console.log autocompleteList
 
 		searchResults.forEach (product) ->
 			listItem =
