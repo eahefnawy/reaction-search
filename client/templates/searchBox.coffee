@@ -1,20 +1,28 @@
 Template.searchBox.rendered = () ->
 
 	$("#searchBox").autocomplete(
-    minLength: 0
+    minLength: 1
 		source: (request, response) ->
       arr = [
         {
-          label: "this label"
-          value: "this value"
-          txt: "hellooooo"
+          value: "Lady Gaga"
+          url: "http://www.ladygaga.com"
+          price: "12.35"
+        }
+        {
+          value: "Lana Del Rey"
+          url: "http://www.lanadelrey.com"
+          price: "45.90"
         }
       ]
       response arr
   ).data("ui-autocomplete")._renderItem = (ul, item) ->
     return  $( "<li>" ).html("
-    <a class='search-item-anchor' href='http://www.google.com'>
-      Gold Ring<span class='search-item-price'>$35.95</span>
+    <a class='search-item-anchor' href='" + item.url + "'>
+      " + item.value + "
+      <span class='search-item-price'>
+        $" + item.price + "
+      </span>
     </a>
       ").appendTo( ul )
 
