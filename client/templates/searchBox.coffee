@@ -11,6 +11,7 @@ Template.searchBox.rendered = () ->
       console.log autocompleteList
 
       searchResults.forEach (product) ->
+        console.log "hello"
         console.log product.title
         console.log product._id
         console.log product.variants[0].price
@@ -18,9 +19,10 @@ Template.searchBox.rendered = () ->
           value: product.title
           id: product._id
           price: product.variants[0].price
+        console.log listItem
 
       
-        autocompleteList.push(listItem)
+        #autocompleteList.push(listItem)
         return
 
       response autocompleteList
