@@ -6,7 +6,7 @@ Template.searchBox.rendered = () ->
       Meteor.call "searchProducts", request, (error, result) ->
         console.log error if error
         if result
-          response autocompleteList
+          response result
   ).data("ui-autocomplete")._renderItem = (ul, item) ->
 
     htmlBlock = """
