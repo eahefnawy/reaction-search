@@ -19,6 +19,7 @@ Package.on_use(function (api, where) {
     "client/register.coffee",
     "client/routing.coffee",
     "client/templates/searchBox.html",
+    "client/templates/searchBox.less",
     "client/templates/searchBox.coffee"
   ], ["client"]);
 
