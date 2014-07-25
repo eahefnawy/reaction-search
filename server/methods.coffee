@@ -1,8 +1,8 @@
 Meteor.methods
 	searchProducts: (request) ->
 		console.log request.term
-		searchResults = Products.find({title: {$regex : ".*#{request.term}.*"}}, {fields: {_id: 0, title: 0, variants: 1}})
-		console.log searchResults.fetch()
+		searchResults = Products.find({title: {$regex : ".*#{request.term}.*", $options: "i"}}, {fields: {_id: 1, title: 1, variants: 1}})
+		console.log searchResults.fetch()[0].variants[0].price
 		autocompleteList = []
 
 		searchResults.forEach ((product) ->
