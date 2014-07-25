@@ -1,7 +1,7 @@
 Template.searchBox.rendered = () ->
 
 	$("#searchBox").autocomplete(
-    minLength: 0
+    minLength: 1
 		source: (request, response) ->
       Meteor.call "searchProducts", request, (error, result) ->
         console.log error if error
@@ -20,5 +20,10 @@ Template.searchBox.rendered = () ->
 
   ###
   mongodb indexes
+  better mongodb filtering criteria
   read meteor collections & meteor methods
   ###
+###
+db.Products.find({$text:{$search:"Lady Gaga"}},{_id:1, title:1, variants:1})
+db.Products.runCommand("text",{search:" tutorialspoint "})
+###
