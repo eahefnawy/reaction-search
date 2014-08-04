@@ -8,15 +8,13 @@ Package.on_use(function (api, where) {
     "templating",
     "coffeescript",
     "iron-router",
-    "simple-schema",
-    "autoform",
-    "underscore-string-latest",
     "less",
     "reaction-core"
   ], ["client", "server"]);
 
+  api.add_files("common/register.coffee", ["client", "server"]);
+
   api.add_files([
-    "client/register.coffee",
     "client/routing.coffee",
     "client/templates/searchBox.html",
     "client/templates/searchBox.less",

@@ -4,5 +4,5 @@ Router.map ->
     path: 'searchbox',
     template: 'searchBox'
     waitOn: ->
-      PackagesHandle
+      return ReactionCore.Subscriptions.Packages
       
