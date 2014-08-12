@@ -8,9 +8,6 @@ Package.on_use(function (api, where) {
     "templating",
     "coffeescript",
     "iron-router",
-    "simple-schema",
-    "autoform",
-    "underscore-string-latest",
     "less",
     "reaction-core"
   ], ["client", "server"]);
